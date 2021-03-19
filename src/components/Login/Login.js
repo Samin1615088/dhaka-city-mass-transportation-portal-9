@@ -6,7 +6,7 @@ import "./Login.css";
 import { ButtonBase } from '@material-ui/core';
 
 const Login = () => {
-    //react-hook-form>
+    //react-hook-form<
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = (data) => {
         console.log(data);
