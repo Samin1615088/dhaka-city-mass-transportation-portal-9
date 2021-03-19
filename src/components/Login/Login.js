@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
+import SignIcon from '@material-ui/icons/ArrowForward';
+import "./Login.css";
+import { ButtonBase } from '@material-ui/core';
 
 const Login = () => {
     const { register, handleSubmit, errors } = useForm();
@@ -17,10 +20,10 @@ const Login = () => {
     return (
         <div>
             <h1>This is login page</h1>
-            <Container>
+            <Container className="d-flex flex-column justify-content-center w-50 bg-white p-4 rounded">
             {toggleLoginCreateLogin ?
                 (
-                    <Form className="w-50 bg-white p-4 rounded" onSubmit={handleSubmit(onSubmit)}>
+                    <Form onSubmit={handleSubmit(onSubmit)}>
                         <h4>Login</h4>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
@@ -120,8 +123,8 @@ const Login = () => {
                     </Form.Text>
                 </Form>)
             }
+            <ButtonBase><SignIcon></SignIcon> Continue with Google</ButtonBase>
         </Container >
-
         </div>
     );
 };
