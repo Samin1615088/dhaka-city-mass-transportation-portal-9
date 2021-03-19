@@ -1,5 +1,10 @@
 .App {
-  text-align: center;
+  background-image: url("images/Bg.png");
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: bottom;
 }
 
 .App-logo {
