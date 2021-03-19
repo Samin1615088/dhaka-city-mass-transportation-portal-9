@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBrandLogo from './../../images/Urban Riders.png'
 import { Nav, Navbar, Button, Image } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 const Header = () => {

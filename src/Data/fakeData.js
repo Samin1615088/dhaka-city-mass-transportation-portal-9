@@ -1,4 +1,4 @@
-const fakeData = {
+export const fakeData = {
     "bike": [
         {
             "key": "001",

@@ -4,8 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
@@ -31,7 +30,7 @@ function App() {
             <Route path="/login">
               <Login />
             </Route>
-            <Route path="/search">
+            <Route path="/search/:transport">
               <Search />
             </Route>
             <Route exact path="/">
