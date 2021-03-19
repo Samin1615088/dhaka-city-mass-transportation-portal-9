@@ -1,26 +1,36 @@
 import React from 'react';
 import NavBrandLogo from './../../images/Urban Riders.png'
 import { Nav, Navbar, Button, Image } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
 
 
 const Header = () => {
     return (
         <div>
-            <>
-                <Navbar variant="light" className="d-flex justify-content-between">
-                    <Navbar.Brand href="#home">
-                        <Image src={NavBrandLogo} width="30%" className="d-inline-block align-top" alt="logo" />
-                    </Navbar.Brand>
-                    <Nav className="text-left align-left">
-                        <Nav.Link href="#home" className="mr-5">Home</Nav.Link>
 
-                        <Nav.Link href="#features" className="mr-5">Destinations</Nav.Link>
-                        <Nav.Link href="#pricing" className="mr-5">Blog</Nav.Link>
-                        <Nav.Link href="#contacts" className="mr-5">Contacts</Nav.Link>
-                        <Button variant="outline-primary" className="mr-5">Login</Button>
-                    </Nav>
-                </Navbar>
-            </>
+            <Navbar variant="light" className="d-flex justify-content-between">
+                <Navbar.Brand href="#home">
+                    <Image src={NavBrandLogo} width="30%" className="d-inline-block align-top" alt="logo" />
+                </Navbar.Brand>
+                <Nav className="text-left align-left">
+                    <Nav.Link href="" className="mr-5"><NavLink to="/home">Home</NavLink></Nav.Link>
+
+                    <Nav.Link href="" className="mr-5"><NavLink to="/search">Destination</NavLink></Nav.Link>
+
+                    <Nav.Link href="" className="mr-5">
+                        <NavLink to="/blog">Blog</NavLink>
+                    </Nav.Link>
+                    <Nav.Link href="#contacts" className="mr-5">
+                        <NavLink to="/contacts">Contacts</NavLink>
+                    </Nav.Link>
+                    <NavLink to="/login">
+                        <Button variant="outline-primary" className="mr-5">
+                            Login
+                    </Button>
+                    </NavLink>
+                </Nav>
+            </Navbar>
+
         </div>
     );
 };
