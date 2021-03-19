@@ -7,11 +7,12 @@ import { Link, NavLink } from 'react-router-dom';
 const Header = () => {
     return (
         <div>
-
             <Navbar variant="light" className="d-flex justify-content-between">
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href=""><NavLink to="/home">
                     <Image src={NavBrandLogo} width="30%" className="d-inline-block align-top" alt="logo" />
+                </NavLink>
                 </Navbar.Brand>
+
                 <Nav className="text-left align-left">
                     <Nav.Link href="" className="mr-5"><NavLink to="/home">Home</NavLink></Nav.Link>
 
