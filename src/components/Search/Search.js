@@ -6,6 +6,7 @@ import passengersIcon from './../../images/peopleicon.png'
 import './Search.css';
 import fakeData from '../../Data/fakeData';
 import { useParams } from 'react-router';
+import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 const Search = () => {
     //destination userState>
@@ -100,7 +101,9 @@ const Search = () => {
                                 )
                         }
                     </Col>
-                    <Col className="col-lg-6  col-12 mt-5"><Image src={mapImage} fluid /></Col>
+                    <Col className="col-lg-6  col-12 mt-5">
+                        <Image src={mapImage} fluid />
+                        </Col>
                 </Row>
             </Container>
         </div>

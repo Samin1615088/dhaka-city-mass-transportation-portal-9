@@ -49,6 +49,9 @@ function App() {
               <Route path="/login">
                 <Login />
               </Route>
+              <PrivateRoute exact path="/search">
+                <Search />
+              </PrivateRoute>
               <PrivateRoute path="/search/:transport">
                 <Search />
               </PrivateRoute>
