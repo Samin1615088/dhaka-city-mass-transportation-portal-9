@@ -35,7 +35,9 @@ const Login = () => {
         // currentUserInput.email = data.email;
         // currentUserInput.password = data.password;
 
-        handleSignInWithEmailPassword(data.email, data.password);
+        toggleLoginCreateLogin ?
+            handleLogInWithEmailPassword(data.email, data.password) :
+            handleSignInWithEmailPassword(data.email, data.password);
     }
     //react-hook-form<
 
@@ -55,13 +57,35 @@ const Login = () => {
                 currentUserCreated.displayName = user.displayName || user.email.split('@')[0];
                 setUserStatus(currentUserCreated);
                 console.log('UserStatusContext', userStatus);
+                console.log('toggler', toggleLoginCreateLogin);
             })
             .catch((error) => {
                 console.log(error.message);
             });
 
     }
+    //firebase create with email>
+    const handleLogInWithEmailPassword = (dataEmail, dataPassword) => {
+        firebase.auth().signInWithEmailAndPassword(dataEmail, dataPassword)
+            .then((userCredential) => {
+                // Signed in
+                const user = userCredential.user;
+                // ...
+                console.log(user);
+                const currentUserCreated = { ...userStatus };
+                currentUserCreated.isLoggedIn = 'true';
+                currentUserCreated.email = user.email;
+                currentUserCreated.displayName = user.displayName || user.email.split('@')[0];
+                setUserStatus(currentUserCreated);
+                console.log('UserStatusContext in login', userStatus);
+            })
+            .catch((error) => {
+                console.log('login', error.message);
+            });
+        console.log('handleLogInWithEmailPassword clicked');
+    }
     //firebase create with email<
+
     return (
         <div>
             <Container className="d-flex flex-column justify-content-center w-50 bg-white p-4 rounded">
