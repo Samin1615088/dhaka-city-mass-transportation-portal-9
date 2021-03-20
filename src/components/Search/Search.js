@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Col, Container, Image, Row } from 'react-bootstrap';
-import mapImage from './../../images/map.png';
+import { Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import passengersIcon from './../../images/peopleicon.png'
 import './Search.css';

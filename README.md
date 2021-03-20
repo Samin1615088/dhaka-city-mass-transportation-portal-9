@@ -1,12 +1,23 @@
-# Getting Started with Create React App
+# DHAKA MASS TRANSPORT PORTAL
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is React app  [Live Site Link](https://stupefied-lumiere-fec4c8.netlify.app/).
 
-## Available Scripts
 
-In the project directory, you can run:
+# DESCRIPTION
+This is basic ticket booking website template having remote authentication
 
-### `npm start`
+## TECHNOLOGY I USED 
+
+### `FIREBASE AUTHENTICATION`
+### `REACT ROUTING`
+### `REACT PRIVATE ROUTING`
+### `BOOTSTRAP`
+### `BASIC GOOGLE MAP`
+### `REACT FORM HOOK`
+### `USECONTEXT HOOK`
+### `USESTATE HOOK`
+### `FONT AWESOME`
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

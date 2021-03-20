@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <Container className="d-flex align-items-center" style={{ height: '100vh' }}>
       <Row>
-        <Col className="">
+        <Col>
           <Link to="/search/bike" style={linkStyle}>
             <Card className="w-75  p-4" style={{ border: "2px solid black" }}>
               <Card.Img variant="top" src={bikeImg} />
