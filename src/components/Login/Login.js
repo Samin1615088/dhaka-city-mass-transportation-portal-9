@@ -11,6 +11,7 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import { firebaseConfig } from '../../firebase.config';
 import { UserContext } from '../../App';
+import { useHistory, useLocation } from 'react-router';
 
 
 const Login = () => {
@@ -19,6 +20,12 @@ const Login = () => {
         firebase.initializeApp(firebaseConfig);
     }
     //firebase<
+
+    //private router redirect>
+    const history = useHistory();
+    const location = useLocation();
+    let { from } = location.state || { from: { pathname: "/" } };
+    //private router redirect<
 
     //USER CONTEXT data receiving using context>
     const [userStatus, setUserStatus] = useContext(UserContext);
@@ -58,6 +65,7 @@ const Login = () => {
                 setUserStatus(currentUserCreated);
                 console.log('UserStatusContext', userStatus);
                 console.log('toggler', toggleLoginCreateLogin);
+                history.replace(from);
             })
             .catch((error) => {
                 console.log(error.message);
@@ -78,6 +86,7 @@ const Login = () => {
                 currentUserCreated.displayName = user.displayName || user.email.split('@')[0];
                 setUserStatus(currentUserCreated);
                 console.log('UserStatusContext in login', userStatus);
+                history.replace(from);
             })
             .catch((error) => {
                 console.log('login', error.message);

@@ -12,6 +12,7 @@ import Login from './components/Login/Login';
 import Search from './components/Search/Search';
 import NotFound from './components/NotFound/NotFound';
 import React, { useState } from 'react';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 //user login related CONTEXT>
@@ -48,9 +49,9 @@ function App() {
               <Route path="/login">
                 <Login />
               </Route>
-              <Route path="/search/:transport">
+              <PrivateRoute path="/search/:transport">
                 <Search />
-              </Route>
+              </PrivateRoute>
               <Route exact path="/">
                 <Home />
               </Route>
