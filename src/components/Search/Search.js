@@ -6,7 +6,7 @@ import passengersIcon from './../../images/peopleicon.png'
 import './Search.css';
 import fakeData from '../../Data/fakeData';
 import { useParams } from 'react-router';
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import GoogleMaps from "simple-react-google-maps"
 
 const Search = () => {
     //destination userState>
@@ -82,7 +82,7 @@ const Search = () => {
                                 ) :
                                 (
                                     <div className="container-style  mt-5">
-                                        <div style={{ backgroundColor: '#FF6E40', padding: '40px 20px', borderRadius: '10px', color: 'white' }}>
+                                        <div className="bg-primary" style={{ padding: '40px 20px', borderRadius: '10px', color: 'white' }}>
                                             <h3>FROM: {startToEndLocation.startFrom}</h3>
                                             <br />
                                             <h3>DESTINATION: {startToEndLocation.destination} </h3>
@@ -90,7 +90,7 @@ const Search = () => {
 
                                         {
 
-                                            data !== null  && data[transport].map(vehicle => {
+                                            data !== null && data[transport].map(vehicle => {
                                                 return <>
                                                     <div className="subcontainer-style d-flex justify-content-between mt-4">
                                                         <div className="d-flex justify-content-start">
@@ -107,7 +107,13 @@ const Search = () => {
                         }
                     </Col>
                     <Col className="col-lg-6  col-12 mt-5">
-                        <Image src={mapImage} fluid />
+                        <GoogleMaps
+                            apiKey={"AIzaSyA6vv_eLh94RSVA5wc5PsdZKeiKRM3o4aI"}
+                            style={{ height: "400px", width: "100%" }}
+                            zoom={6}
+                            center={{ lat: 23.796990295865207, lng: 90.41497479090646 }}
+                            markers={{ lat: 23.796990295865207, lng: 90.41497479090646 }} //optional
+                        />
                     </Col>
                 </Row>
             </Container>
