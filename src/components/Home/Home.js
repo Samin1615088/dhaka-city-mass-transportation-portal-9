@@ -5,13 +5,19 @@ import carImg from '../../images/car_img.png'
 import busImg from '../../images/bus_img.png'
 import trainImg from '../../images/train_img.png'
 import { Link } from 'react-router-dom';
+import './Home.css';
 const Home = () => {
+  const linkStyle = {
+    textDecoration: 'none',
+    color: 'black',
+    textAlign: 'center',
+  }
   return (
-    <Container>
+    <Container className="d-flex align-items-center" style={{ height: '100vh' }}>
       <Row>
-        <Col>
-          <Link to="/search/bike">
-            <Card className="w-50">
+        <Col className="">
+          <Link to="/search/bike" style={linkStyle}>
+            <Card className="w-75  p-4" style={{ border: "2px solid black" }}>
               <Card.Img variant="top" src={bikeImg} />
               <Card.Body>
                 <Card.Title>Bike</Card.Title>
@@ -20,8 +26,8 @@ const Home = () => {
           </Link>
         </Col>
         <Col>
-          <Link to="/search/car">
-            <Card className="w-50">
+          <Link to="/search/car" style={linkStyle}>
+            <Card className="w-75  p-4" style={{ border: "2px solid black" }} >
               <Card.Img variant="top" src={carImg} />
               <Card.Body>
                 <Card.Title>Car</Card.Title>
@@ -30,8 +36,8 @@ const Home = () => {
           </Link>
         </Col>
         <Col>
-          <Link to="/search/bus">
-            <Card className="w-50">
+          <Link to="/search/bus" style={linkStyle}>
+            <Card className="w-75  p-4" style={{ border: "2px solid black" }} >
               <Card.Img variant="top" src={busImg} />
               <Card.Body>
                 <Card.Title>Bus</Card.Title>
@@ -40,8 +46,8 @@ const Home = () => {
           </Link>
         </Col>
         <Col>
-          <Link to="/search/train">
-            <Card className="w-50">
+          <Link to="/search/train" style={linkStyle}>
+            <Card className="w-75  p-4" style={{ border: "2px solid black" }} >
               <Card.Img variant="top" src={trainImg} />
               <Card.Body>
                 <Card.Title>Train</Card.Title>

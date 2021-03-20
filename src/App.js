@@ -35,11 +35,6 @@ function App() {
         <Router>
           <div>
             <Header />
-            <p>Name: {userStatus.displayName}</p>
-            <p>Email: {userStatus.email}</p>
-            <p>IsLoggin: {userStatus.isLoggedIn}</p>
-            {console.log(userStatus.isLoggedIn)}
-
             {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
             <Switch>

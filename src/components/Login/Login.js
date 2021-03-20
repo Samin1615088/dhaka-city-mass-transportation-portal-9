@@ -95,9 +95,35 @@ const Login = () => {
     }
     //firebase create with email<
 
+    //firebase SignIn By Google>
+    const handleSignInByGoogle = () => {
+        const provider = new firebase.auth.GoogleAuthProvider();
+
+        firebase.auth()
+            .signInWithPopup(provider)
+            .then((result) => {
+                const user = result.user;
+                const currentUserCreated = { ...userStatus };
+                // currentUserCreated = {
+                //     isLoggedIn: 'true',
+                //     email: user.email, 
+                //     displayName: user.displayName || user.email.split('@')[0]
+                // };
+                currentUserCreated.isLoggedIn = 'true';
+                currentUserCreated.email = user.email;
+                currentUserCreated.displayName = user.displayName || user.email.split('@')[0];
+                setUserStatus(currentUserCreated);
+                console.log('UserStatusContext in login', userStatus);
+                history.replace(from);
+            }).catch((error) => {
+                console.log(error.message);
+            });
+    }
+    //firebase SignIn By Google<
+
     return (
         <div>
-            <Container className="d-flex flex-column justify-content-center w-50 bg-white p-4 rounded">
+            <Container className="d-flex flex-column justify-content-center w-50 bg-white p-4 rounded" style={{border: "2px solid black", borderRadius: "5px"}}>
                 {toggleLoginCreateLogin ?
                     (
                         <Form onSubmit={handleSubmit(onSubmit)}>
@@ -200,7 +226,7 @@ const Login = () => {
                         </Form.Text>
                     </Form>)
                 }
-                <ButtonBase><SignIcon></SignIcon> Continue with Google</ButtonBase>
+                <ButtonBase onClick={handleSignInByGoogle}><SignIcon></SignIcon> Continue with Google</ButtonBase>
             </Container >
         </div>
     );

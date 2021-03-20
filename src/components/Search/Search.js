@@ -6,7 +6,7 @@ import passengersIcon from './../../images/peopleicon.png'
 import './Search.css';
 import fakeData from '../../Data/fakeData';
 import { useParams } from 'react-router';
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 
 const Search = () => {
     //destination userState>
@@ -55,21 +55,23 @@ const Search = () => {
                             (toggler) ?
                                 (<div class="form-container  mt-5">
                                     <form onSubmit={handleSubmit(onSubmit)}>
-                                        <label>STARTING FROM:
+                                        <div>
+                                            <label>STARTING FROM:
                                             <select name="startFrom" ref={register}>
-                                                <option value="Motijheel">Mothijheel</option>
-                                                <option value="Mirpur">Mirpur</option>
-                                                <option value="Boshundhara">Boshundhara</option>
-                                            </select>
-                                        </label>
-                                        <br />
-                                        <label>DESTINATION:
+                                                    <option value="Motijheel">Mothijheel</option>
+                                                    <option value="Mirpur">Mirpur</option>
+                                                    <option value="Boshundhara">Boshundhara</option>
+                                                </select>
+                                            </label>
+                                            <br />
+                                            <label>DESTINATION:
                                             <select name="destination" ref={register}>
-                                                <option value="Mirpur">Mirpur</option>
-                                                <option value="Motijheel">Mothijheel</option>
-                                                <option value="Boshundhara">Boshundhara</option>
-                                            </select>
-                                        </label>
+                                                    <option value="Mirpur">Mirpur</option>
+                                                    <option value="Motijheel">Mothijheel</option>
+                                                    <option value="Boshundhara">Boshundhara</option>
+                                                </select>
+                                            </label>
+                                        </div>
                                         <br />
                                         <label>Date
                     <input type="date" name="date" ref={register}></input>
@@ -80,8 +82,9 @@ const Search = () => {
                                 ) :
                                 (
                                     <div className="container-style  mt-5">
-                                        <div style={{ backgroundColor: '#FF6E40', padding: '10px', borderRadius: '10px', color: 'white' }}>
+                                        <div style={{ backgroundColor: '#FF6E40', padding: '20px 20px', borderRadius: '10px', color: 'white' }}>
                                             <h3>FROM: {startToEndLocation.startFrom}</h3>
+                                            <br/>
                                             <h3>DESTINATION: {startToEndLocation.destination} </h3>
                                         </div>
                                         {
@@ -103,7 +106,7 @@ const Search = () => {
                     </Col>
                     <Col className="col-lg-6  col-12 mt-5">
                         <Image src={mapImage} fluid />
-                        </Col>
+                    </Col>
                 </Row>
             </Container>
         </div>

@@ -8,7 +8,7 @@ export const fakeData = {
         },
         {
             "key": "002",
-            "capacity": "1",
+            "capacity": "2",
             "image": "https://i.ibb.co/rHkqQh2/Frame.png",
             "rent": "$47"
         },
@@ -20,7 +20,7 @@ export const fakeData = {
         },
         {
             "key": "004",
-            "capacity": "1",
+            "capacity": "2",
             "image": "https://i.ibb.co/rHkqQh2/Frame.png",
             "rent": "$112"
         }
@@ -34,7 +34,7 @@ export const fakeData = {
         },
         {
             "key": "006",
-            "capacity": "4",
+            "capacity": "2",
             "image": "https://i.ibb.co/GvPtJ9X/Frame-2.png",
             "rent": "$920"
         },
@@ -46,7 +46,7 @@ export const fakeData = {
         },
         {
             "key": "008",
-            "capacity": "4",
+            "capacity": "2",
             "image": "https://i.ibb.co/GvPtJ9X/Frame-2.png",
             "rent": "$741"
         }
@@ -60,13 +60,13 @@ export const fakeData = {
         },
         {
             "key": "010",
-            "capacity": "30",
+            "capacity": "25",
             "image": "https://i.ibb.co/DGPYmKx/Frame-1.png",
             "rent": "$19"
         },
         {
             "key": "011",
-            "capacity": "30",
+            "capacity": "35",
             "image": "https://i.ibb.co/DGPYmKx/Frame-1.png",
             "rent": "$4"
         },
