@@ -15,9 +15,9 @@ const Home = () => {
   return (
     <Container className="d-flex align-items-center" style={{ height: '100vh' }}>
       <Row>
-        <Col>
+        <Col >
           <Link to="/search/bike" style={linkStyle}>
-            <Card className="w-75  p-4" style={{ border: "2px solid black" }}>
+            <Card className="p-4" style={{ border: "2px solid black" }}>
               <Card.Img variant="top" src={bikeImg} />
               <Card.Body>
                 <Card.Title>Bike</Card.Title>
@@ -25,9 +25,9 @@ const Home = () => {
             </Card>
           </Link>
         </Col>
-        <Col>
+        <Col >
           <Link to="/search/car" style={linkStyle}>
-            <Card className="w-75  p-4" style={{ border: "2px solid black" }} >
+            <Card className="p-4" style={{ border: "2px solid black" }} >
               <Card.Img variant="top" src={carImg} />
               <Card.Body>
                 <Card.Title>Car</Card.Title>
@@ -35,9 +35,9 @@ const Home = () => {
             </Card>
           </Link>
         </Col>
-        <Col>
+        <Col >
           <Link to="/search/bus" style={linkStyle}>
-            <Card className="w-75  p-4" style={{ border: "2px solid black" }} >
+            <Card className="p-4" style={{ border: "2px solid black" }} >
               <Card.Img variant="top" src={busImg} />
               <Card.Body>
                 <Card.Title>Bus</Card.Title>
@@ -45,9 +45,9 @@ const Home = () => {
             </Card>
           </Link>
         </Col>
-        <Col>
+        <Col >
           <Link to="/search/train" style={linkStyle}>
-            <Card className="w-75  p-4" style={{ border: "2px solid black" }} >
+            <Card className="  p-4" style={{ border: "2px solid black" }} >
               <Card.Img variant="top" src={trainImg} />
               <Card.Body>
                 <Card.Title>Train</Card.Title>

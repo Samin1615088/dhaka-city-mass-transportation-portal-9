@@ -20,15 +20,15 @@ const Header = () => {
                 </Navbar.Brand>
 
                 <Nav className="text-left align-left">
-                    <Nav.Link href="" className="mr-5"><NavLink to="/home">Home</NavLink></Nav.Link>
+                    <Nav.Link href="" className="mr-5 text_warning"><NavLink to="/home" style={{color: 'white', fontWeight: 'bolder'}}>Home</NavLink></Nav.Link>
 
-                    <Nav.Link href="" className="mr-5"><NavLink to="/search">Destination</NavLink></Nav.Link>
+                    <Nav.Link href="" className="mr-5"><NavLink to="/search" style={{color: 'white', fontWeight: 'bolder'}}>Destination</NavLink></Nav.Link>
 
                     <Nav.Link href="" className="mr-5">
-                        <NavLink to="/blog">Blog</NavLink>
+                        <NavLink to="/blog" style={{color: 'white', fontWeight: 'bolder'}}>Blog</NavLink>
                     </Nav.Link>
                     <Nav.Link href="#contacts" className="mr-5">
-                        <NavLink to="/contacts">Contacts</NavLink>
+                        <NavLink to="/contacts" style={{color: 'white', fontWeight: 'bolder'}}>Contacts</NavLink>
                     </Nav.Link>
                     <NavLink to="/login">
                         {(userStatus.isLoggedIn === 'false') ?

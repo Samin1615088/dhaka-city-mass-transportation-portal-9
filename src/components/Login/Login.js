@@ -39,10 +39,6 @@ const Login = () => {
     const onSubmit = (data) => {
         setFormData(data);
         console.log('formData in useState', formData);
-        // const currentUserInput = {...userStatus};
-        // currentUserInput.email = data.email;
-        // currentUserInput.password = data.password;
-
         toggleLoginCreateLogin ?
             handleLogInWithEmailPassword(data.email, data.password) :
             handleSignInWithEmailPassword(data.email, data.password);
@@ -124,7 +120,7 @@ const Login = () => {
 
     return (
         <div>
-            <Container className="d-flex flex-column justify-content-center w-50 bg-white p-4 rounded" style={{border: "2px solid black", borderRadius: "5px"}}>
+            <Container className="d-flex flex-column justify-content-center w-50 bg-white p-4 rounded" style={{border: "2px solid black", borderRadius: "5px", marginTop: "100px"}}>
                 {toggleLoginCreateLogin ?
                     (
                         <Form onSubmit={handleSubmit(onSubmit)}>
