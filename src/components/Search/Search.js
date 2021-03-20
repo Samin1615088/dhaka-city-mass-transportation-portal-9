@@ -29,7 +29,7 @@ const Search = () => {
 
 
     //accessing dynamic router key>
-    const transport = useParams().transport;
+    const transport = useParams().transport || 'car';
     //accessing dynamic router key< 
 
     //fake-data-access>
@@ -82,13 +82,15 @@ const Search = () => {
                                 ) :
                                 (
                                     <div className="container-style  mt-5">
-                                        <div style={{ backgroundColor: '#FF6E40', padding: '20px 20px', borderRadius: '10px', color: 'white' }}>
+                                        <div style={{ backgroundColor: '#FF6E40', padding: '40px 20px', borderRadius: '10px', color: 'white' }}>
                                             <h3>FROM: {startToEndLocation.startFrom}</h3>
-                                            <br/>
+                                            <br />
                                             <h3>DESTINATION: {startToEndLocation.destination} </h3>
                                         </div>
+
                                         {
-                                            data[transport].map(vehicle => {
+
+                                            data !== null  && data[transport].map(vehicle => {
                                                 return <>
                                                     <div className="subcontainer-style d-flex justify-content-between mt-4">
                                                         <div className="d-flex justify-content-start">

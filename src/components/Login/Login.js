@@ -25,6 +25,7 @@ const Login = () => {
     const history = useHistory();
     const location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
+    console.log('location ',{from});
     //private router redirect<
 
     //USER CONTEXT data receiving using context>
