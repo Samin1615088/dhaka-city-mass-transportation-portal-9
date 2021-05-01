@@ -8,7 +8,7 @@ This is a ticket booking website where users can login and book tickets for them
 
 <br/>
 
-Demo Website [LiveSite Link](https://sad-yalow-c8a063.netlify.app/) <br/>
+Demo: [LiveSite Link](https://sad-yalow-c8a063.netlify.app/) <br/>
 Frontend github: [Code Link](https://github.com/Samin1615088/dhaka-city-mass-transportation-portal-9/)
 
 
