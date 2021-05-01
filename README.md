@@ -1,26 +1,24 @@
 # DHAKA MASS TRANSPORT PORTAL
 
-This project is React app [Live Site Link](https://sad-yalow-c8a063.netlify.app/).
+This is a ticket booking website where users can login and book tickets for them and can see available cars, bikes from fake API.<br/>
+
+- developers version google map implementation is done.
+- firebase authentication is implemented. 
+- Bootstrap and custom CSS are used for site responsiveness.
+
+<br/>
+
+Demo Website [LiveSite Link](https://sad-yalow-c8a063.netlify.app/) 
+
+Frontend github: [Code Link](https://github.com/Samin1615088/dhaka-city-mass-transportation-portal-9/)
 
 
-# DESCRIPTION
+## Technologies Used For 
 
-This is basic ticket booking website template having remote authentication
+### Frontend
+`REACT ROUTER`  `BOOTSTRAP`  `REACT FORM HOOK`  `USECONTEXT HOOK`  `USESTATE HOOK`  `FONT AWESOME` `GOOGLE MAP DEVELOPER VERSION`
 
-## TECHNOLOGY I USED
 
-#### `FIREBASE AUTHENTICATION`
+###  Backend
+`FIREBASE AUTHENTICATION`  `NETLIFY HOSTING`
 
-#### `REACT PRIVATE ROUTING`
-
-#### `BOOTSTRAP`
-
-#### `BASIC GOOGLE MAP`
-
-#### `REACT FORM HOOK`
-
-#### `USECONTEXT HOOK`
-
-#### `USESTATE HOOK`
-
-#### `FONT AWESOME`
